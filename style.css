@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-primary: "Poppins", sans-serif;
+  --text-color: #e1e1e6;
+
+  --hue: 194;
+  --primary-color: hsl(194, 72%, 13%);
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: rgb(21, 22, 22);
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+#app {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2.5rem 0;
+}
+.no-favorites.hide {
+  display: none;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  height: 3.2rem;
+  border: 1px solid #06181c;
+  border-radius: 0.4rem 0 0 0.4rem;
+  padding: 0 0.8rem;
+  background-color: #06181c;
+  color: hsl(0, 80%, 96%);
+}
+.search button {
+  background-color: #065e7c;
+  color: var(--text-color);
+  border-radius: 0 0.4rem 0.4rem 0;
+  height: 3.2rem;
+  border: none;
+  padding: 0 1rem;
+  cursor: pointer;
+  margin-left: 0.8rem;
+}
+
+.search button:hover {
+  color: #065e7c;
+  background: #ffffff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  box-shadow: 0 1rem 0.2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+table th {
+  background: var(--primary-color);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+table th:first-child {
+  border-top-left-radius: 0.4rem;
+}
+table th:last-child {
+  border-top-right-radius: 0.4rem;
+}
+table tr:nth-child(odd) {
+  background: #06181c;
+}
+table tr {
+  background: #0a313a;
+}
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.no-favorites {
+  display: flex;
+  align-items: center;
+  place-content: center;
+  gap: 3rem;
+  padding: 13rem 0;
+}
+
+.no-favorites img {
+  margin-bottom: 2rem;
+}
+
+.no-favorites p {
+  color: #4e5455;
+  font-size: 2rem;
+}
